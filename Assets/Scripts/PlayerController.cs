@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
 	Transform playerInputSpace = default;
 
+    [SerializeField]
+    bool useCustomGravity = false;
+
     // Private variables
     InputAction moveAction, jumpAction;
     Rigidbody body;
@@ -114,8 +117,14 @@ public class PlayerController : MonoBehaviour {
 	}
 
     void FixedUpdate() {
-        Vector3 gravity = CustomGravity.GetGravity(body.position, out upAxis);
-
+        Vector3 gravity;
+        if (useCustomGravity) {
+            gravity = CustomGravity.GetGravity(body.position, out upAxis);
+        } else {
+            gravity = Physics.gravity;
+            upAxis = Vector3.up;
+        }
+        
 		UpdateState();
         AdjustVelocity();
 

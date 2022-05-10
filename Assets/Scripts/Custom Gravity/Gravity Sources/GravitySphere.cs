@@ -3,7 +3,7 @@ using UnityEngine;
 public class GravitySphere : GravitySource {
 
 	[SerializeField]
-	float gravity = 18f;
+	float gravity = Physics.gravity.magnitude;
 
 	[SerializeField, Min(0f)]
 	float innerFalloffRadius = 1f, innerRadius = 5f;

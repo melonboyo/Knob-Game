@@ -3,7 +3,7 @@ using UnityEngine;
 public class GravityPlane : GravitySource {
 
 	[SerializeField]
-	float gravity = 18f;
+	float gravity = Physics.gravity.magnitude;
 
 	[SerializeField, Min(0f)]
 	float range = 1f;

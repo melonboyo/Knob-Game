@@ -43,11 +43,12 @@
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\Custom Gravity\CustomGravity.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\MainCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Custom Gravity\Gravity Sources\GravitySphere.cs" />
      <Compile Include="Assets\Scripts\Custom Gravity\Gravity Sources\GravityPlane.cs" />
      <Compile Include="Assets\Scripts\Custom Gravity\Gravity Sources\GravityBox.cs" />
-     <Compile Include="Assets\Scripts\MainCamera.cs" />
+     <Compile Include="Assets\Scripts\Site.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

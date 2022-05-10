@@ -3,7 +3,7 @@ using UnityEngine;
 public class GravityBox : GravitySource {
 	
 	[SerializeField]
-	float gravity = 18f;
+	float gravity = Physics.gravity.magnitude;
 	
 	[SerializeField]
 	Vector3 boundaryDistance = Vector3.one;

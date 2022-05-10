@@ -72,7 +72,7 @@ public class MainCamera : MonoBehaviour {
 		} 
 	}
 
-	public void setFocus(Transform newMainFocus, List<Vector3> newAreaConstraints, Transform newControlPoint) {
+	public void SetFocus(Transform newMainFocus, List<Vector3> newAreaConstraints, Transform newControlPoint) {
 		inTransition = true;
 		mainFocusPoint = newMainFocus.position;
 		areaConstraints = newAreaConstraints;
@@ -81,7 +81,7 @@ public class MainCamera : MonoBehaviour {
 		targetPos = newControlPoint.position;
 	}
 
-	public void setFocus(Transform newMainFocus, List<Vector3> newAreaConstraints, List<Transform> newControlPoints, Vector3 startingPos) {
+	public void SetFocus(Transform newMainFocus, List<Vector3> newAreaConstraints, List<Transform> newControlPoints, Vector3 startingPos) {
 		inTransition = true;
 		mainFocusPoint = newMainFocus.position;
 		areaConstraints = newAreaConstraints;
@@ -89,8 +89,6 @@ public class MainCamera : MonoBehaviour {
 		targetPos = startingPos;
 	}
 
-    // Adjust camera position and rotation in LateUpdate, in case focus
-    // position is moved in Update
 	void LateUpdate() {
 		Vector3 newPos = transform.position;
 		Quaternion newRot = transform.rotation;
